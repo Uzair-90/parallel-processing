@@ -5,7 +5,7 @@
 
 #define NROWS  8
 #define NCOLS  8
-#define NUMTHREADS 4
+#define NUMTHREADS 8
 
 int** mat_alloc(int nrows, int ncols) {
 
@@ -160,7 +160,7 @@ int main (int argc, char* argv[]) {
     printf("\n");
 
     //creating NUMTHREADS ids
-    pthread_t tids[NUMTHREADS];
+    /*pthread_t tids[NUMTHREADS];
     //creating thread args
     threadarg args[NUMTHREADS];
 
@@ -202,7 +202,7 @@ int main (int argc, char* argv[]) {
 
     _cpu_time_d = ((double)(_endd - _startd)/CLOCKS_PER_SEC);
 
-    printf("Execution Time 4 Thread: %lf (s)\n",_cpu_time_d);
+    printf("Execution Time %d Thread: %lf (s)\n",NUMTHREADS,_cpu_time_d);*/
 
 
     return 0;
